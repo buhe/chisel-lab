@@ -15,5 +15,7 @@ class Delay extends Module {
 
   // ***** your code ends here *****
 
-  io.dout := res
+  io.dout := delay(delay(res))
+
+  def delay(x: UInt) = RegNext(x)
 }

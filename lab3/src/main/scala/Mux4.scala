@@ -20,6 +20,22 @@ class Mux4 extends Module {
   // and connect the input and output ports.
 
   // below is dummy code to make this example compile
+  val sel = io.sel
+  // switch(sel) {
+  //   is(0.U) {
+
+  //   }
+  //   is(1.U) {
+
+  //   }
+  //   is(2.U) {
+
+  //   }
+  //   is(3.U) {
+
+  //   }
+  // }
+  
   io.y := io.c
 
   // ***** your code ends here *****
