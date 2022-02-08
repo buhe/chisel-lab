@@ -5,3 +5,4 @@ project
 target
 output
 test_run_dir
+.bsp
