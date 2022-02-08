@@ -17,3 +17,7 @@ class Count15 extends Module {
 
   io.dout := res
 }
+
+object Count15 extends App {
+  chisel3.emitVerilog(new Count15, Array("--target-dir", "output/"))
+}
