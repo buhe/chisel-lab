@@ -15,7 +15,7 @@ class Mux2 extends Module {
 
   // ***** your code starts here *****
 
-  res := b
+  res := Mux()
 
   // ***** your code ends here *****
 
