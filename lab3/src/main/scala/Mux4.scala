@@ -3,7 +3,7 @@ import chisel3._
 /**
   * Use Mux2 components to build a 4:1 multiplexer
   */
-
+import chisel3.util._ //add switch
 class Mux4 extends Module {
   val io = IO(new Bundle {
     val a = Input(UInt(1.W))
@@ -20,23 +20,23 @@ class Mux4 extends Module {
   // and connect the input and output ports.
 
   // below is dummy code to make this example compile
-  val sel = io.sel
-  // switch(sel) {
-  //   is(0.U) {
+  io.y := 0.U
+  switch(io.sel) {
+    is(0.U) {
+        io.y := io.a
+    }
+    is(1.U) {
+      io.y := io.b
+    }
+    is(2.U) {
+      io.y := io.c
+    }
+    is(3.U) {
+      io.y := io.d
+    }
+  }
 
-  //   }
-  //   is(1.U) {
 
-  //   }
-  //   is(2.U) {
-
-  //   }
-  //   is(3.U) {
-
-  //   }
-  // }
-  
-  io.y := io.c
 
   // ***** your code ends here *****
 }
